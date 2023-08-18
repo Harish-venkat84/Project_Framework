@@ -130,6 +130,7 @@ public class BaseClass {
 		}
 	}
 
+	// pageTitle will return the title of the webpage as a String
 	public String pageTitel(){
 
 		String title = "";
@@ -147,6 +148,7 @@ public class BaseClass {
 		return title;
 	}
 
+	// returns the current URL as a String
 	public String currentURL(){
 
 		try{
