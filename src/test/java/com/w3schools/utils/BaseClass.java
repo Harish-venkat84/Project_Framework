@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BaseClass {
@@ -99,17 +101,63 @@ public class BaseClass {
 		
 		}catch(Exception ex) {
 			
-			System.out.println("");
+			System.out.println("problem in clearing text on " + className() + " class, clearText method");
 			
 			ex.printStackTrace();
 		}
 	}
 	
-	
-	public void waitForMe() {
-		
-		
+	// WebDriverWait object return
+	// parameter => timeout
+	public WebDriverWait waitForMe(long timeout) {
+
+		return new WebDriverWait(driver, Duration.ofSeconds(timeout));
+
 	}
-	
-	
+
+	// This method wait based on the visibility of WebElement
+	// parameter => element
+	public void visibleOfElement(WebElement element){
+
+		try{
+
+			waitForMe(10).until(ExpectedConditions.visibilityOf(element));
+
+		}catch (Exception ex){
+
+			System.out.println("problem in web driver wait on "+ className() +" class, visibleOfElement method");
+			ex.printStackTrace();
+		}
+	}
+
+	public String pageTitel(){
+
+		String title = "";
+
+		try{
+
+			title = driver.getTitle();
+
+		}catch (Exception ex){
+
+			System.out.println("problem on getting the web page title on "+className()+" class, pageTitle method");
+			ex.printStackTrace();
+		}
+
+		return title;
+	}
+
+	public String currentURL(){
+
+		try{
+
+			return driver.getCurrentUrl();
+		}catch (Exception exception){
+
+			System.out.println("problem on getting the current url on "+ className() +" class, currentURL method");
+			exception.printStackTrace();
+		}
+
+		return "";
+	}
 }
