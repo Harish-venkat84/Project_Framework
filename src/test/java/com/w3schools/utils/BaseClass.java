@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -57,6 +58,7 @@ public class BaseClass {
 			ex.printStackTrace();
 		}
 	}
+	
 	// closes all opened browsers
 	public void closeAllBrowsers() {
 		
@@ -98,8 +100,16 @@ public class BaseClass {
 		}catch(Exception ex) {
 			
 			System.out.println("");
+			
 			ex.printStackTrace();
 		}
 	}
+	
+	
+	public void waitForMe() {
+		
+		
+	}
+	
 	
 }
