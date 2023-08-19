@@ -154,6 +154,7 @@ public class BaseClass {
 		try{
 
 			return driver.getCurrentUrl();
+			
 		}catch (Exception exception){
 
 			System.out.println("problem on getting the current url on "+ className() +" class, currentURL method");
