@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class BaseClass {
+public class SeWrappers {
 
 	public static WebDriver driver;
 	
@@ -133,11 +133,9 @@ public class BaseClass {
 	// pageTitle will return the title of the webpage as a String
 	public String pageTitel(){
 
-		String title = "";
-
 		try{
 
-			title = driver.getTitle();
+			return driver.getTitle();
 
 		}catch (Exception ex){
 
@@ -145,12 +143,13 @@ public class BaseClass {
 			ex.printStackTrace();
 		}
 
-		return title;
+		return "";
 	}
 
 	// returns the current URL as a String
 	public String currentURL(){
 
+		
 		try{
 
 			return driver.getCurrentUrl();
