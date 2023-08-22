@@ -59,6 +59,14 @@ public class SeWrappers {
 		}
 	}
 	
+	public void clickButton(WebElement element) {
+		
+		try { element.click(); }catch (Exception ex) {
+			
+			System.out.println("problem in clicking button " + className() + "clickButton method");
+		}
+	}
+	
 	// closes all opened browsers
 	public void closeAllBrowsers() {
 		
@@ -106,7 +114,6 @@ public class SeWrappers {
 	public void visibleOfElement(WebElement element){
 
 		try{ waitForMe(10).until(ExpectedConditions.visibilityOf(element)); }catch (Exception ex){
-			
 
 			System.out.println("problem in web driver wait on "+ className() +"visibleOfElement method");
 			ex.printStackTrace();
@@ -192,5 +199,7 @@ public class SeWrappers {
 			ex.printStackTrace();
 		}
 	}
+	
+	
 	
 }

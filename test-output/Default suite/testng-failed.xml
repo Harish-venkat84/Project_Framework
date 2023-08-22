@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.w3schools.utils.BaseClass">
+      <class name="com.w3schools.tests.LoginTest">
         <methods>
-          <include name="name"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.w3schools.utils.BaseClass -->
+      </class> <!-- com.w3schools.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
