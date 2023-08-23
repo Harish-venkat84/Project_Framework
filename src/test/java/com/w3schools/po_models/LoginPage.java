@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import lombok.Getter;
+
+@Getter
 public class LoginPage {
 
 	public WebDriver driver;
@@ -27,16 +30,7 @@ public class LoginPage {
 			PageFactory.initElements(driver2, this);
 		}
 	}
+	
+	
 
-	public WebElement getMailID() {
-		return mailID;
-	}
-
-	public WebElement getPassword() {
-		return password;
-	}
-
-	public WebElement getLoginButton() {
-		return loginButton;
-	}
 }

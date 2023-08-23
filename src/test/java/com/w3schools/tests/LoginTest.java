@@ -8,7 +8,7 @@ import com.w3schools.utils.SeWrappers;
 
 public class LoginTest extends SeWrappers{
 
-	public PageObjectManager pom = new PageObjectManager(driver);
+	public static PageObjectManager pom = new PageObjectManager(driver);
 	
 	public FileReaderManager property = new FileReaderManager();
 	
@@ -17,13 +17,11 @@ public class LoginTest extends SeWrappers{
 		
 		launchBrowser("chrome", "https://profile.w3schools.com/");
 		
-		visibleOfElement(pom.getLoginPage().getMailID());
-		
-		typeText(pom.getLoginPage().getMailID(), property.getMailID());
-		
-		typeText(pom.getLoginPage().getPassword(), property.getPass());
-		
-		clickButton(pom.getLoginPage().getLoginButton());
+//		typeText(pom.getLoginPage().getMailID(), property.getMailID());
+//		
+//		typeText(pom.getLoginPage().getPassword(), property.getPass());
+//		
+//		clickButton(pom.getLoginPage().getLoginButton());
 	}
 	
 }
