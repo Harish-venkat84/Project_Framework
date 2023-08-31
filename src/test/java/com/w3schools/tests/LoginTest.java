@@ -17,11 +17,11 @@ public class LoginTest extends SeWrappers{
 		
 		launchBrowser("chrome", "https://profile.w3schools.com/");
 		
-//		typeText(pom.getLoginPage().getMailID(), property.getMailID());
-//		
-//		typeText(pom.getLoginPage().getPassword(), property.getPass());
-//		
-//		clickButton(pom.getLoginPage().getLoginButton());
+		typeText(pom.getLoginPage().getMailID(), property.getMailID());
+		
+		typeText(pom.getLoginPage().getPassword(), property.getPass());
+		
+		clickButton(pom.getLoginPage().getLoginButton());
 	}
 	
 }
